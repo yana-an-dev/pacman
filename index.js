@@ -3,7 +3,23 @@ const grid = document.querySelector(".grid");
 const scoreDisplay = document.querySelector("#score");
 let squares = []
 let score = 0
+const mobileArrowUp = document.querySelector(".arrow__up")
+const mobileArrowLeft = document.querySelector(".arrow__left")
+const mobileArrowDown = document.querySelector(".arrow__down")
+const mobileArrowRight = document.querySelector(".arrow__right")
 
+mobileArrowUp.addEventListener('click', (e) => {
+  control(e.key = "Up")
+})
+mobileArrowRight.addEventListener('click', (e) => {
+  control(e.key = "Right")
+})
+mobileArrowLeft.addEventListener('click', (e) => {
+  control(e.key = "Left")
+})
+mobileArrowDown.addEventListener('click', (e) => {
+  control(e.key = "Down")
+})
 // or getElementId('score')
 // 28*28 =784
 // 0 - pac-dots
@@ -148,8 +164,12 @@ function control(e) {
   checkForWin()
   checkForGameOver()
 }
+
+
 console.log(pacmanCurrentIndex);
 document.addEventListener('keyup', control)
+document.addEventListener('click', control)
+
 
 function pacDotEaten() {
   if (squares[pacmanCurrentIndex].classList.contains('pac-dot')) {

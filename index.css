@@ -1,7 +1,7 @@
 html,
 body {
-  margin: 10;
-  padding: 10;
+  margin: 10px;
+  padding: 10px;
 }
 .grid {
   display: flex;
@@ -9,8 +9,11 @@ body {
   width: 420px;
   height: 420px;
   border: solid black;
+  margin-right:0px;
 }
-
+h1{
+  margin-top: 5px;
+}
 .grid div {
   width: 15px;
   height: 15px;;
@@ -62,4 +65,25 @@ body {
   background-color:black;
   border:none
 
+}
+.arrow__container{
+  display:flex;
+  justify-content: center;
+  width: 420px;
+  margin-top:0px;
+ 
+
+}
+.arrow__up{
+  display:flex;
+  justify-content: center;
+  font-size: xx-large;
+  width: 420px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  line-height: 20px;
+}
+.arrow{
+  font-size: xx-large;
 }
